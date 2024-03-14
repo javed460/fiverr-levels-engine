@@ -1,0 +1,25 @@
+levels:
+  - name: Level 1
+    parameters:
+      successScore: 5
+      rating: 4.4
+      responseRate: 80
+      orders: 5
+      uniqueClients: 3
+      earnings: 400
+  - name: Level 2
+    parameters:
+      successScore: 7
+      rating: 4.6
+      responseRate: 90
+      orders: 20
+      uniqueClients: 10
+      earnings: 800
+  - name: Top Rated
+    parameters:
+      successScore: 9
+      rating: 4.7
+      responseRate: 90
+      orders: 40
+      uniqueClients: 20
+      earnings: 1800
