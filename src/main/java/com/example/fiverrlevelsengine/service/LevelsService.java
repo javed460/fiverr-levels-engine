@@ -1,6 +1,7 @@
 package com.example.fiverrlevelsengine.service;
 
 import com.example.fiverrlevelsengine.domain.Levels;
+import com.example.fiverrlevelsengine.domain.Parameters;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,7 @@ public class LevelsService {
         return levels;
     }
 
-
+    public String findLevel(Parameters parameters) {
+        return null;
+    }
 }
