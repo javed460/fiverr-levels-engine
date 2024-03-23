@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
+<div class="container">
+    <h1 class="mt-5">Fiverr Levels</h1>
+    <div class="row">
+        <div class="col-md-4" th:each="level : ${fiverrLevels.levels}">
+            <div class="level-card">
+                <div class="level-card-header">
+                    <h4 th:text="${level.name}"></h4>
+                </div>
+                <div class="level-card-body">
+                    <p class="level-parameter">Success Score: <span th:text="${level.parameters.successScore}"></span></p>
+                    <p class="level-parameter">Rating: <span th:text="${level.parameters.rating}"></span></p>
+                    <p class="level-parameter">Response Rate: <span th:text="${level.parameters.responseRate}"></span><span>%</span></p>
+                    <p class="level-parameter">Orders: <span th:text="${level.parameters.orders}"></span></p>
+                    <p class="level-parameter">Unique Clients: <span th:text="${level.parameters.uniqueClients}"></span></p>
+                    <p class="level-parameter">Earnings: <span>$</span><span th:text="${level.parameters.earnings}"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a th:href="@{/showFormLevelFinder}"><h2>Know Your Level</h2></a>
+</div>
 </body>
 </html>
