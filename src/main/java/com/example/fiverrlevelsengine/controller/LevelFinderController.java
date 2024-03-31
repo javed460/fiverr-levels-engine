@@ -22,6 +22,8 @@ public class LevelFinderController {
     @PostMapping("/findLevel")
     public String processParameters(@ModelAttribute Parameters parameters, Model model) {
         String level = levelsService.findLevel(parameters);
-        return level;
+        model.addAttribute("level", level);
+        model.addAttribute("inParameters", parameters);
+        return "showlevel";
     }
 }
