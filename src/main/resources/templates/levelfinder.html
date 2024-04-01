@@ -7,7 +7,36 @@
 </head>
 <body>
 
-<h1> testing </h1>
+<div class="container form-container">
+  <h1 class="mb-4">Enter Parameters</h1>
+  <form th:action="@{/findLevel}" th:object="${parameters}" method="post">
+    <div class="form-group">
+      <label for="successScore">Success Score:</label>
+      <input type="number" class="form-control" id="successScore" name="successScore">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input type="text" class="form-control" id="rating" name="rating">
+    </div>
+    <div class="form-group">
+      <label for="responseRate">Response Rate:</label>
+      <input type="number" class="form-control" id="responseRate" name="responseRate">
+    </div>
+    <div class="form-group">
+      <label for="orders">Orders:</label>
+      <input type="number" class="form-control" id="orders" name="orders">
+    </div>
+    <div class="form-group">
+      <label for="uniqueClients">Unique Clients:</label>
+      <input type="number" class="form-control" id="uniqueClients" name="uniqueClients">
+    </div>
+    <div class="form-group">
+      <label for="earnings">Earnings:</label>
+      <input type="number" class="form-control" id="earnings" name="earnings">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
 </body>
 </html>
