@@ -7,5 +7,21 @@
 </head>
 <body>
 
+<div class="container">
+    <h2 class="mt-5">Your Level</h2> <h4 th:text="${level}"></h4>
+    <div class="row">
+        <div class="level-card-body">
+            <p><b>Given Params</b></p>
+            <p class="level-parameter">Success Score: <span th:text="${inParameters.successScore}"></span></p>
+            <p class="level-parameter">Rating: <span th:text="${inParameters.rating}"></span></p>
+            <p class="level-parameter">Response Rate: <span th:text="${inParameters.responseRate}"></span><span>%</span>
+            </p>
+            <p class="level-parameter">Orders: <span th:text="${inParameters.orders}"></span></p>
+            <p class="level-parameter">Unique Clients: <span th:text="${inParameters.uniqueClients}"></span></p>
+            <p class="level-parameter">Earnings: <span>$</span><span th:text="${inParameters.earnings}"></span></p>
+        </div>
+    </div>
+</div>
 
 </body>
+</html>
