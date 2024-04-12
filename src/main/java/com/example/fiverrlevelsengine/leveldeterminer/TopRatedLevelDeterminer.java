@@ -10,20 +10,14 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 @Order(1)
-public class TopRatedLevelDeterminer implements LevelDeterminer {
+public class TopRatedLevelDeterminer extends LevelParamsChecker implements LevelDeterminer {
     private final Levels levels;
 
     @Override
     public boolean levelMet(Parameters inParameters) {
         Level topRated = levels.getLevels().get(2);
         Parameters parametersThreshold = topRated.getParameters();
-
-        return inParameters.getSuccessScore() >= parametersThreshold.getSuccessScore() &&
-                inParameters.getRating() >= parametersThreshold.getRating() &&
-                inParameters.getResponseRate() >= parametersThreshold.getResponseRate() &&
-                inParameters.getOrders() >= parametersThreshold.getOrders() &&
-                inParameters.getUniqueClients() >= parametersThreshold.getUniqueClients() &&
-                inParameters.getEarnings() >= parametersThreshold.getEarnings();
+        return checkParams(inParameters, parametersThreshold);
     }
 
     @Override
